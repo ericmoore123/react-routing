@@ -1,21 +1,21 @@
 import './App.css';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
 
-export const GlobalContext = React.createContext('test');
+export const GlobalContext = React.createContext();
 
 const App = () => {
 
-  // const [globalData, setGlobalData] = useState('Test!');
+  const [globalData, setGlobalData] = useState('Test!');
 
   return (
     <div className="App">
-      <GlobalContext.Provider value='test'>
-        <Navbar />
+      <Navbar />
+      <GlobalContext.Provider value={{ globalData, setGlobalData }}>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />

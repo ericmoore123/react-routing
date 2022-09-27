@@ -1,14 +1,13 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import {GlobalContext} from '../App';
 
 export default function About() {
+    const {globalData} = useContext(GlobalContext);
+
   return (
     <>
         <div>About</div>
-        <GlobalContext.Consumer >
-        {(value) => <p>{value}</p>}
-
-        </GlobalContext.Consumer>
+        <p>{globalData}</p>
     </>
   )
 }
