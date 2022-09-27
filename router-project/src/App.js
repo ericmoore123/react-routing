@@ -17,9 +17,9 @@ const App = () => {
       <Navbar />
       <GlobalContext.Provider value={{ globalData, setGlobalData }}>
         <Routes>
-          <Route className="link" path="/" element={<Home/>} />
-          <Route className="link" path="/about" element={<About/>} />
-          <Route className="link" path="/Projects" element={<Projects/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/Projects" element={<Projects/>} />
         </Routes>
       </GlobalContext.Provider>
     </div>
