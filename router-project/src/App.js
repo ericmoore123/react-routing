@@ -23,7 +23,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log('Ran useEffect');
     const nameStatus = localStorage.getItem('nameSet');
     const name = localStorage.getItem('userName');
     if(nameStatus){
@@ -46,12 +45,12 @@ const App = () => {
           contentLabel="My dialog"
           style={{
             overlay: {
-              backgroundColor: 'rgb(238, 238, 238)'
+              backgroundColor: 'rgb(5, 22, 45)'
             }
           }}
         >
           <form>
-            <h3 htmlFor="name">What is your name?</h3>
+            <h1 htmlFor="name">What is your name?</h1>
             <input type="text" id="name" onChange={(e) => setGlobalData(e.target.value)}/>
             <button className="closeModal" onClick={closeModal}>Close</button>
           </form>

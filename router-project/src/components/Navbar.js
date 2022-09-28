@@ -7,7 +7,7 @@ const NavbarContainer = styled.nav`
   height: 50px;
   background-color: lightgrey;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 const NavbarLinkContainer = styled.div`
