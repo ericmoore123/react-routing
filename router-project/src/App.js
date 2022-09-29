@@ -15,7 +15,7 @@ const App = () => {
 
   const [globalData, setGlobalData] = useState('Test!');
   const [isOpen, setIsOpen] = useState(true);
-
+ 
   const closeModal = () => {
     setIsOpen(false);
     localStorage.setItem('nameSet', true);
