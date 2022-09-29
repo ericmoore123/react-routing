@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from '../App';
+import Button from '@mui/material/Button';
 
 export default function About() {
     const {globalData} = useContext(GlobalContext);
@@ -8,6 +9,7 @@ export default function About() {
     <>
         <div>About</div>
         <p>{globalData}</p>
+        <Button variant="contained" >Click me!</Button>
     </>
   )
 };
